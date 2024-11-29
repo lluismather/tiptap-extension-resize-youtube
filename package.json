@@ -1,0 +1,60 @@
+{
+  "name": "tiptap-extension-resize-youtube",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A tiptap extension for resizing youtube iframes, based on bae-sh/tiptap-extension-resize-image.",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./esm/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lluismather/tiptap-extension-resize-youtube"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:tsc && yarn build:rollup",
+    "build:tsc": "yarn tsc --declaration --emitDeclarationOnly --declarationDir dist",
+    "build:rollup": "rollup -c rollup.config.mjs",
+    "clean": "rm -rf dist esm",
+    "test": "jest"
+  },
+  "author": "lluismather <lluis@mathergroup.io>",
+  "contributors": [],
+  "directories": {
+    "lib": "lib"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tiptap",
+    "tiptap extension",
+    "youtube",
+    "resize-youtube",
+    "resizable youtube",
+    "align youtube",
+    "video",
+    "iframe"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-typescript": "^7.23.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@tiptap/core": "^2.1.13",
+    "@tiptap/extension-image": "^2.1.13",
+    "@tiptap/pm": "^2.1.13",
+    "@types/node": "^20.10.4",
+    "prettier": "^3.3.3",
+    "rollup": "^4.8.0",
+    "tslib": "^2.6.2",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^2.0.0",
+    "@tiptap/extension-youtube": "^2.0.0",
+    "@tiptap/pm": "^2.0.0"
+  }
+}
